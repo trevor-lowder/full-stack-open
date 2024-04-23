@@ -4,7 +4,7 @@ sequenceDiagram
   participant Server
 
   activate Browser
-  Browser->>Server: GET /
+  Browser->>Server: GET /exampleapp/notes
   activate Server
   Server-->Browser: HTML document
   deactivate Server
