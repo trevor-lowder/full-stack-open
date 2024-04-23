@@ -8,17 +8,17 @@ activate Browser
   activate Server
   Server->>Browser: HTTP Status 302 (redirect) with Location: /notes
   deactivate Server
-  Browser->>Server: GET /exampleapp/main.css  // Fetches stylesheet
+  Browser->>Server: GET /exampleapp/main.css  
   activate Server
-  Server-->>Browser: the CSS file
+  Server-->>Browser: CSS file
   deactivate Server
-  Browser->>Server: GET /exampleapp/main.js  // Fetches JavaScript
+  Browser->>Server: GET /exampleapp/main.js  
   activate Server
-  Server-->>Browser: the JavaScript file
+  Server-->>Browser: JavaScript file
   deactivate Server
-  Browser->>Server: GET /exampleapp/data.json  // Fetches raw notes data
+  Browser->>Server: GET /exampleapp/data.json
   activate Server
-  Server-->>Browser: [{ "content": "...", "date": "..." }, ...] (JSON data)
+  Server-->>Browser: [{ "content": "...", "date": "..." }, ...] 
   deactivate Server
   Note right of Browser: Browser updates UI
   deactivate Browser
